@@ -685,7 +685,12 @@ img { max-width: 100%; display: block; }
    MOBILE
    ============================================= */
 @media (max-width: 768px) {
-  body { flex-direction: column; overflow: hidden; }
+  html { height: 100%; overflow: hidden; }
+  body {
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
 
   /* ---- Bottom nav bar ---- */
   .sidebar {
@@ -750,10 +755,13 @@ img { max-width: 100%; display: block; }
   /* ---- Main content — must scroll ---- */
   .main-content {
     margin-left: 0;
-    height: calc(100vh - 62px);
-    overflow-y: auto;
+    flex: none;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 62px;
   }
 
   /* ---- Prevent horizontal overflow everywhere ---- */
@@ -774,7 +782,7 @@ img { max-width: 100%; display: block; }
   /* ---- Hero ---- */
   .hero {
     padding: 32px 20px 28px;
-    min-height: calc(100vh - 62px);
+    min-height: auto;
     align-items: flex-start;
   }
 
@@ -846,5 +854,5 @@ img { max-width: 100%; display: block; }
   .skill-chip { padding: 6px 10px; }
 
   /* ---- Resume ---- */
-  .resume-wrap { padding: 20px 20px 28px; height: calc(100vh - 62px); }
+  .resume-wrap { padding: 20px 20px 28px; height: auto; }
 }
