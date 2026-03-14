@@ -1,59 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css?v=2">
-    <title>Praveendhra Rajkumar - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praveendhra Rajkumar — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFGXN2TVCC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PFGXN2TVCC');
+  </script>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-                <h1>Praveendhra Rajkumar</h1>
-        </div>
-    </header>
-    <div class="sidebar">
-        <button class="side-btn" id ="home" onclick="loadContent('home')">Home</button>
-        <button class="side-btn" id ="education" onclick="loadContent('education')">Education</button>
-        <button class="side-btn" id ="work" onclick="loadContent('work')">Work Experience</button>
-        <button class="side-btn" id ="projects" onclick="loadContent('projects')">Projects</button>
-        <button class="side-btn" id ="skills" onclick="loadContent('skills')">Skills</button>
-        <button class="side-btn" id ="resume" onclick="loadContent('resume')">Resume</button>
-        <button class="side-btn" id="contact" onclick="loadContent('contact')">Contact</button>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-name">Praveendhra<br>Rajkumar</div>
+      <div class="brand-role">// DevOps &amp; Full-Stack</div>
     </div>
-    <div id="middle">
+
+    <nav class="sidebar-nav">
+      <button class="side-btn active" data-page="home" onclick="loadPage('home', this)">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </button>
+      <button class="side-btn" data-page="work" onclick="loadPage('work', this)">
+        <i class="fa-solid fa-briefcase"></i>
+        <span>Experience</span>
+      </button>
+      <button class="side-btn" data-page="projects" onclick="loadPage('projects', this)">
+        <i class="fa-solid fa-code"></i>
+        <span>Projects</span>
+      </button>
+      <button class="side-btn" data-page="skills" onclick="loadPage('skills', this)">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Skills</span>
+      </button>
+      <button class="side-btn" data-page="education" onclick="loadPage('education', this)">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Education</span>
+      </button>
+      <button class="side-btn" data-page="contact" onclick="loadPage('contact', this)">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Contact</span>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="https://linkedin.com/in/praveendhra" target="_blank" title="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/prvn9021" target="_blank" title="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="mailto:prvn9021@gmail.com" title="Email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
     </div>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Praveendhra Rajkumar. All rights reserved.</p>
-        </div>
-    </footer>
+  </aside>
+
+  <main class="main-content">
+    <div id="page-content"></div>
+  </main>
+
+  <script>
+    window.loadPage = function(page, btn) {
+      // Update active nav button
+      document.querySelectorAll('.side-btn').forEach(b => b.classList.remove('active'));
+      if (btn) {
+        btn.classList.add('active');
+      } else {
+        const match = document.querySelector(`.side-btn[data-page="${page}"]`);
+        if (match) match.classList.add('active');
+      }
+
+      fetch(page + '.html')
+        .then(res => {
+          if (!res.ok) throw new Error('Not found');
+          return res.text();
+        })
+        .then(html => {
+          const el = document.getElementById('page-content');
+          el.innerHTML = html;
+          el.classList.remove('page-enter');
+          void el.offsetWidth; // reflow
+          el.classList.add('page-enter');
+          document.querySelector('.main-content').scrollTo({ top: 0, behavior: 'instant' });
+        })
+        .catch(err => console.error('Failed to load:', page, err));
+    };
+
+    // Navigate helper — called from content pages
+    window.navigateTo = function(page) {
+      window.loadPage(page, null);
+    };
+
+    // Load home on init
+    loadPage('home', document.querySelector('.side-btn[data-page="home"]'));
+  </script>
 </body>
 </html>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PFGXN2TVCC"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PFGXN2TVCC');
-    let btns = ["home", "education", "work", "projects", "skills", "resume", "contact"];
-    async function loadContent(page) {
-        try {
-            const response = await fetch(page + '.html');
-            if (!response.ok) {
-                throw new Error(`Failed to load ${page}.html`);
-            }
-            const content = await response.text();
-            document.getElementById('middle').innerHTML = content;
-            for(let i=0; i<btns.length; i++) {
-                document.getElementById(btns[i]).style.backgroundColor = '';
-            }
-            document.getElementById(page).style.backgroundColor = '#555';
-        } catch (error) {
-            console.error(error);
-        }
-    }
-   loadContent('home');
-</script>
-<!-- Google tag (gtag.js) -->
