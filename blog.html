@@ -1,0 +1,795 @@
+<div class="page-wrap blog-page">
+
+  <!-- Hero Banner -->
+  <div class="blog-hero">
+    <div class="blog-hero-orb blog-orb-1"></div>
+    <div class="blog-hero-orb blog-orb-2"></div>
+    <div class="page-label">Insights &amp; Thoughts</div>
+    <h2 class="page-heading" style="margin-bottom:14px;">Blog</h2>
+    <p class="blog-hero-sub">Deep dives on engineering, AI, and the tools that change how we build.</p>
+  </div>
+
+  <!-- ─── ARTICLE ─────────────────────────────────────────── -->
+  <article class="blog-article">
+
+    <!-- Article Header -->
+    <div class="blog-article-header">
+      <div class="blog-meta-row">
+        <span class="blog-tag-chip">AI &amp; Productivity</span>
+        <span class="blog-tag-chip outline">DevOps</span>
+        <span class="blog-meta-date">
+          <i class="fa-regular fa-calendar"></i> March 14, 2026
+        </span>
+        <span class="blog-meta-read">
+          <i class="fa-regular fa-clock"></i> 8 min read
+        </span>
+      </div>
+
+      <h1 class="blog-title">How AI Boosts Productivity — A Developer's Honest Take</h1>
+
+      <p class="blog-subtitle">
+        From autocompletion to autonomous agents, AI has quietly reshaped how engineers spend their day.
+        Here's what actually moved the needle — and what's still hype.
+      </p>
+
+      <div class="blog-author-row">
+        <div class="blog-author-avatar">PR</div>
+        <div>
+          <div class="blog-author-name">Praveendhra Rajkumar</div>
+          <div class="blog-author-title">DevOps Engineer &amp; Full-Stack Developer</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="blog-divider"></div>
+
+    <!-- Table of Contents -->
+    <div class="blog-toc">
+      <div class="blog-toc-label"><i class="fa-solid fa-list-ul"></i> Table of Contents</div>
+      <ol class="blog-toc-list">
+        <li><a href="#section-intro">The Before Picture</a></li>
+        <li><a href="#section-code">AI-Powered Code Assistance</a></li>
+        <li><a href="#section-devops">AI in the DevOps Loop</a></li>
+        <li><a href="#section-writing">Docs, Emails &amp; Writing</a></li>
+        <li><a href="#section-agents">Agentic AI — The Next Frontier</a></li>
+        <li><a href="#section-limits">What AI Still Can't Do</a></li>
+        <li><a href="#section-verdict">The Verdict</a></li>
+      </ol>
+    </div>
+
+    <!-- ── SECTION 1 ── -->
+    <section class="blog-section" id="section-intro">
+      <h2 class="blog-section-title">
+        <span class="blog-section-num">01</span> The Before Picture
+      </h2>
+      <p>
+        Let's be honest about what the average developer's day looked like before AI tools became truly useful.
+        Writing boilerplate, digging through Stack Overflow, context-switching between twelve browser tabs,
+        trying to remember the exact <code class="inline-code">kubectl</code> command you ran three months ago.
+      </p>
+      <p>
+        Studies estimate developers spend less than <strong>33% of their day actually writing code</strong>.
+        The rest is reading documentation, debugging, reviewing PRs, attending meetings, and pushing configs.
+        AI didn't change <em>what</em> engineers do — it compressed the dead time in between.
+      </p>
+
+      <div class="blog-callout callout-cyan">
+        <i class="fa-solid fa-lightbulb callout-icon"></i>
+        <div>
+          <strong>Key Insight:</strong> AI productivity gains aren't about writing code faster — they're about
+          eliminating the cognitive overhead that surrounds writing code.
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 2 ── -->
+    <section class="blog-section" id="section-code">
+      <h2 class="blog-section-title">
+        <span class="blog-section-num">02</span> AI-Powered Code Assistance
+      </h2>
+      <p>
+        Code assistants like GitHub Copilot, Cursor, and Claude Code have made the biggest dent in day-to-day
+        output. But not in the way most people expect.
+      </p>
+
+      <div class="blog-cards-grid">
+        <div class="blog-card">
+          <div class="blog-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div class="blog-card-title">Boilerplate Generation</div>
+          <p class="blog-card-text">
+            REST endpoints, CRUD handlers, Dockerfiles, CI/CD YAML — tasks that used to take 30 minutes
+            now take 2. The model knows the pattern; you supply the intent.
+          </p>
+          <div class="blog-card-stat"><span class="stat-highlight">~10×</span> faster for scaffolding</div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <div class="blog-card-title">Debugging Assistance</div>
+          <p class="blog-card-text">
+            Paste a stack trace and a broken snippet. In most cases you get a pinpointed explanation
+            and a fix in seconds — hours before you'd find it manually.
+          </p>
+          <div class="blog-card-stat"><span class="stat-highlight">~60%</span> reduction in debug time</div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-icon"><i class="fa-solid fa-code-branch"></i></div>
+          <div class="blog-card-title">Code Reviews</div>
+          <p class="blog-card-text">
+            AI reviewers flag security issues, dead code, and anti-patterns before a pull request
+            even lands in a human's queue. Review cycles shrink.
+          </p>
+          <div class="blog-card-stat"><span class="stat-highlight">~40%</span> faster PR cycles</div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-icon"><i class="fa-solid fa-language"></i></div>
+          <div class="blog-card-title">Language Bridging</div>
+          <p class="blog-card-text">
+            Need to port a Python script to Go? Translate a Bash one-liner into PowerShell?
+            AI removes the language barrier, letting teams work comfortably across the stack.
+          </p>
+          <div class="blog-card-stat"><span class="stat-highlight">Zero</span> ramp-up per language</div>
+        </div>
+      </div>
+
+      <p>
+        The real unlock isn't raw speed — it's <strong>flow state preservation</strong>. When you don't have to
+        stop and Google syntax or copy-paste from docs, your mental model of the problem stays intact.
+        That continuity compounds over a full workday.
+      </p>
+    </section>
+
+    <!-- ── SECTION 3 ── -->
+    <section class="blog-section" id="section-devops">
+      <h2 class="blog-section-title">
+        <span class="blog-section-num">03</span> AI in the DevOps Loop
+      </h2>
+      <p>
+        DevOps is ops, automation, and configuration at scale. It also means a lot of YAML, a lot of flags,
+        and a lot of <em>"which exact Helm value controls this?"</em>. AI is well-suited here.
+      </p>
+
+      <div class="blog-timeline-mini">
+        <div class="mini-timeline-item">
+          <div class="mini-dot"></div>
+          <div class="mini-content">
+            <div class="mini-title">Infrastructure as Code (IaC)</div>
+            <p class="mini-text">
+              Generating Terraform modules, Kubernetes manifests, and Ansible playbooks from plain-English descriptions.
+              I've described a VPC topology in a sentence and gotten a working <code class="inline-code">.tf</code> file back
+              in under a minute.
+            </p>
+          </div>
+        </div>
+        <div class="mini-timeline-item">
+          <div class="mini-dot"></div>
+          <div class="mini-content">
+            <div class="mini-title">Incident Response</div>
+            <p class="mini-text">
+              AI-driven observability tools correlate logs, traces, and metrics to surface root cause faster than
+              a human oncall engineer can context-switch. Mean Time To Resolution (MTTR) drops measurably.
+            </p>
+          </div>
+        </div>
+        <div class="mini-timeline-item">
+          <div class="mini-dot"></div>
+          <div class="mini-content">
+            <div class="mini-title">Pipeline Optimization</div>
+            <p class="mini-text">
+              LLMs can read your CI config, identify redundant steps, suggest caching strategies, and rewrite
+              pipelines to parallelize safely. What used to be a manual audit is now a prompt.
+            </p>
+          </div>
+        </div>
+        <div class="mini-timeline-item">
+          <div class="mini-dot"></div>
+          <div class="mini-content">
+            <div class="mini-title">Security Scanning</div>
+            <p class="mini-text">
+              AI-integrated SAST/DAST tools explain vulnerability context instead of just flagging line numbers.
+              Developers fix issues they actually understand, rather than closing tickets blindly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 4 ── -->
+    <section class="blog-section" id="section-writing">
+      <h2 class="blog-section-title">
+        <span class="blog-section-num">04</span> Docs, Emails &amp; Writing
+      </h2>
+      <p>
+        Technical writing is the dark matter of engineering productivity — invisible until it's missing.
+        Runbooks, READMEs, post-mortems, Jira tickets, architecture decision records. Nobody likes writing them;
+        everyone suffers when they don't exist.
+      </p>
+
+      <div class="blog-callout callout-purple">
+        <i class="fa-solid fa-quote-left callout-icon"></i>
+        <div>
+          "I described a production incident in bullet points. The AI turned it into a structured post-mortem
+          with timeline, root cause, contributing factors, and action items — in about 90 seconds.
+          That used to be a 45-minute slog after an already exhausting oncall shift."
+          <div class="callout-attribution">— Personal experience, 2025</div>
+        </div>
+      </div>
+
+      <p>
+        The same applies to email. Translating a terse Slack message into a clear stakeholder update,
+        or drafting a technical spec from meeting notes, now takes minutes. Engineers who used to avoid
+        async communication because writing was slow now write more — and communicate better.
+      </p>
+    </section>
+
+    <!-- ── SECTION 5 ── -->
+    <section class="blog-section" id="section-agents">
+      <h2 class="blog-section-title">
+        <span class="blog-section-num">05</span> Agentic AI — The Next Frontier
+      </h2>
+      <p>
+        Single-turn AI assistance is table stakes now. The real acceleration is coming from
+        <strong>agentic workflows</strong> — AI that doesn't just answer questions but executes multi-step tasks
+        autonomously.
+      </p>
+
+      <div class="blog-highlight-box">
+        <div class="highlight-header">
+          <i class="fa-solid fa-robot"></i>
+          <span>What Agentic AI Looks Like in Practice</span>
+        </div>
+        <ul class="highlight-list">
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <strong>Code + Deploy pipelines:</strong> You describe a feature; the agent writes tests, implements the change,
+            opens a PR, and monitors the deployment — without leaving a single terminal window open on your machine.
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <strong>Automated triage:</strong> Agents read new GitHub issues, reproduce bugs in a sandboxed environment,
+            assign severity, and even draft fix branches — before a human wakes up.
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <strong>Self-healing infrastructure:</strong> Agents tied to monitoring systems detect anomalies, confirm
+            thresholds independently, restart services or scale pods, and page humans only when escalation logic says so.
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <strong>Knowledge synthesis:</strong> Long-running agents index internal wikis, RFCs, and Slack history,
+            then answer product questions with sourced, up-to-date context — replacing an entire class of
+            "quick Slack question" interruptions.
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        We're not fully there yet — reliability, auditability, and security controls are still maturing.
+        But the trajectory is clear. The teams adopting agentic patterns today will have an operational
+        head start that's hard to close later.
+      </p>
+    </section>
+
+    <!-- ── SECTION 6 ── -->
+    <section class="blog-section" id="section-limits">
+      <h2 class="blog-section-title">
+        <span class="blog-section-num">06</span> What AI Still Can't Do
+      </h2>
+      <p>
+        Intellectual honesty matters here. AI boosts productivity across a wide surface area, but the
+        ceiling is lower than the hype machine suggests.
+      </p>
+
+      <div class="blog-limits-grid">
+        <div class="limit-card">
+          <div class="limit-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div class="limit-title">System-Level Judgment</div>
+          <p class="limit-text">
+            Deciding <em>whether</em> to build something, how to sequence a migration, or where to draw
+            service boundaries — these require context about people, teams, history, and tradeoffs that
+            AI simply doesn't have access to.
+          </p>
+        </div>
+        <div class="limit-card">
+          <div class="limit-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div class="limit-title">Novel Problem Solving</div>
+          <p class="limit-text">
+            AI excels at recognized patterns. When you're operating at the frontier of what's been built
+            before — new hardware, genuinely novel algorithms — you're largely on your own.
+          </p>
+        </div>
+        <div class="limit-card">
+          <div class="limit-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div class="limit-title">Accountability &amp; Trust</div>
+          <p class="limit-text">
+            AI-generated code needs review. AI-generated docs need verification. Blindly shipping
+            AI output without understanding it creates invisible technical debt and security risk.
+          </p>
+        </div>
+        <div class="limit-card">
+          <div class="limit-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div class="limit-title">Long-Horizon Reasoning</div>
+          <p class="limit-text">
+            Maintaining coherent context across weeks of design work, competing constraints, and evolving requirements is
+            still a human strength. AI sessions are still mostly stateless in practice.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 7 ── -->
+    <section class="blog-section" id="section-verdict">
+      <h2 class="blog-section-title">
+        <span class="blog-section-num">07</span> The Verdict
+      </h2>
+      <p>
+        AI is the most significant productivity multiplier since the IDE. It's not replacing engineers —
+        it's <strong>reshaping what engineering time gets spent on</strong>. The mechanical and lookup-heavy parts
+        of the job are compressing. The judgment-heavy parts are expanding.
+      </p>
+      <p>
+        For teams willing to invest in learning the tools, adjusting workflows, and building responsible
+        guardrails, the compounding effect over 12–24 months is real and measurable. For teams that treat it
+        as a novelty, the gap to their competition will quietly widen.
+      </p>
+
+      <div class="blog-callout callout-cyan">
+        <i class="fa-solid fa-rocket callout-icon"></i>
+        <div>
+          <strong>Bottom line:</strong> Adopt AI tooling with intention. Use it to eliminate cognitive noise,
+          not to skip understanding. The engineers who get the most out of AI are the ones who are still
+          thinking critically — just faster.
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Footer -->
+    <div class="blog-divider"></div>
+    <div class="blog-article-footer">
+      <div class="blog-tags-row">
+        <span class="blog-footer-label">Topics:</span>
+        <span class="blog-tag-chip">Artificial Intelligence</span>
+        <span class="blog-tag-chip">Productivity</span>
+        <span class="blog-tag-chip">DevOps</span>
+        <span class="blog-tag-chip">Engineering</span>
+        <span class="blog-tag-chip">LLMs</span>
+      </div>
+      <div class="blog-share-row">
+        <span class="blog-footer-label">Share:</span>
+        <a class="blog-share-btn" href="https://twitter.com/intent/tweet?text=How+AI+Boosts+Productivity+%E2%80%94+A+Developer%27s+Honest+Take&url=" target="_blank" rel="noopener noreferrer" title="Share on X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a class="blog-share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<style>
+/* ── Blog Page Styles (scoped, no global side effects) ── */
+
+.blog-page { max-width: 820px; padding-bottom: 80px; }
+
+/* Hero Banner */
+.blog-hero {
+  position: relative;
+  padding: 56px 0 40px;
+  overflow: hidden;
+}
+.blog-hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(70px);
+}
+.blog-orb-1 {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(124,58,237,0.12), transparent 70%);
+  top: -120px; right: -80px;
+}
+.blog-orb-2 {
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, rgba(0,212,255,0.08), transparent 70%);
+  bottom: -60px; left: -40px;
+}
+.blog-hero-sub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
+/* Article wrapper */
+.blog-article { padding-top: 8px; }
+
+/* Meta row */
+.blog-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.blog-tag-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(0,212,255,0.12);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 4px;
+  padding: 3px 10px;
+}
+.blog-tag-chip.outline {
+  background: rgba(124,58,237,0.1);
+  color: #a78bfa;
+  border-color: rgba(124,58,237,0.22);
+}
+.blog-meta-date, .blog-meta-read {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Article title */
+.blog-title {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+}
+.blog-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 28px;
+  max-width: 680px;
+}
+
+/* Author row */
+.blog-author-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.blog-author-avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #000;
+  flex-shrink: 0;
+}
+.blog-author-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.blog-author-title {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Divider */
+.blog-divider { height: 1px; background: var(--border); margin: 32px 0; }
+
+/* Table of Contents */
+.blog-toc {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-cyan);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 40px;
+}
+.blog-toc-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-cyan);
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.blog-toc-list {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.blog-toc-list li { color: var(--text-secondary); font-size: 0.88rem; }
+.blog-toc-list a {
+  color: var(--text-secondary);
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.blog-toc-list a:hover { color: var(--accent-cyan); }
+
+/* Sections */
+.blog-section { margin-bottom: 52px; }
+.blog-section p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+.blog-section p strong { color: var(--text-primary); }
+.blog-section p em { color: var(--accent-cyan); font-style: normal; font-weight: 500; }
+
+.blog-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.blog-section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.15);
+  border-radius: 5px;
+  padding: 3px 9px;
+  flex-shrink: 0;
+}
+
+/* Inline code */
+.inline-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82em;
+  background: rgba(0,212,255,0.07);
+  color: var(--accent-cyan);
+  border-radius: 4px;
+  padding: 1px 6px;
+  border: 1px solid rgba(0,212,255,0.12);
+}
+
+/* Callout boxes */
+.blog-callout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px 22px;
+  border-radius: var(--radius);
+  margin: 26px 0;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+.blog-callout strong { color: var(--text-primary); }
+.callout-cyan {
+  background: rgba(0,212,255,0.06);
+  border: 1px solid rgba(0,212,255,0.18);
+  border-left: 3px solid var(--accent-cyan);
+}
+.callout-purple {
+  background: rgba(124,58,237,0.07);
+  border: 1px solid rgba(124,58,237,0.2);
+  border-left: 3px solid var(--accent-purple);
+}
+.callout-icon { font-size: 1rem; flex-shrink: 0; margin-top: 3px; }
+.callout-cyan .callout-icon { color: var(--accent-cyan); }
+.callout-purple .callout-icon { color: #a78bfa; }
+.callout-attribution {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Blog cards grid */
+.blog-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 26px 0;
+}
+.blog-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.blog-card:hover {
+  border-color: rgba(0,212,255,0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+}
+.blog-card-icon {
+  font-size: 1.2rem;
+  color: var(--accent-cyan);
+  margin-bottom: 12px;
+}
+.blog-card-title {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.blog-card-text {
+  font-size: 0.83rem !important;
+  color: var(--text-secondary);
+  line-height: 1.7 !important;
+  margin-bottom: 14px !important;
+}
+.blog-card-stat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-top: auto;
+}
+.stat-highlight {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* Mini timeline */
+.blog-timeline-mini {
+  position: relative;
+  padding-left: 28px;
+  margin: 26px 0;
+}
+.blog-timeline-mini::before {
+  content: '';
+  position: absolute;
+  left: 5px; top: 10px; bottom: 40px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent-cyan) 0%, rgba(0,212,255,0.1) 100%);
+}
+.mini-timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+.mini-dot {
+  position: absolute;
+  left: -30px; top: 7px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-cyan);
+}
+.mini-timeline-item:first-child .mini-dot { background: var(--accent-cyan); }
+.mini-content { }
+.mini-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.mini-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Highlight box */
+.blog-highlight-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 26px 0;
+}
+.highlight-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0,212,255,0.07);
+  border-bottom: 1px solid rgba(0,212,255,0.12);
+  padding: 14px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+}
+.highlight-list {
+  list-style: none;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.highlight-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.highlight-list li i {
+  color: var(--accent-cyan);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.highlight-list li strong { color: var(--text-primary); }
+
+/* Limits grid */
+.blog-limits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 26px 0;
+}
+.limit-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 2px solid rgba(239,68,68,0.35);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+}
+.limit-icon { color: #f87171; font-size: 0.95rem; margin-bottom: 10px; }
+.limit-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.limit-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Article footer */
+.blog-article-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.blog-tags-row, .blog-share-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.blog-footer-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.blog-share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 7px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.blog-share-btn:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .blog-cards-grid { grid-template-columns: 1fr; }
+  .blog-limits-grid { grid-template-columns: 1fr; }
+  .blog-article-footer { flex-direction: column; align-items: flex-start; }
+}
+</style>
